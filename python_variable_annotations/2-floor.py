@@ -7,6 +7,7 @@ import math
 import
 """
 
+
 def floor(n: float) -> int:
     """
     return the floor of the float
