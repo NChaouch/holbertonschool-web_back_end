@@ -3,6 +3,9 @@
 code
 """
 import math
+"""
+import
+"""
 
 def floor(n: float) -> int:
     """
