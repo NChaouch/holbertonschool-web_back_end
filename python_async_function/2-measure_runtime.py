@@ -21,8 +21,8 @@ def measure_time(n: int, max_delay: int) -> float:
         n (int): argument passed to wait_n
         max_delay (int): argument passed to wait_n
 
-    Return:
-        Float: average time
+    Returns:
+        float: average time
     """
     start = time.time()
     asyncio.run(wait_n(n, max_delay))
