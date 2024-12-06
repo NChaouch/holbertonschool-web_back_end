@@ -21,12 +21,12 @@ def measure_time(n: int, max_delay: int) -> float:
         n (int): argument passed to wait_n
         max_delay (int): argument passed to wait_n
         
-    Returns:
+    Return:
         Float: verage time
     """
-    time_start = time.time()
+    start = time.time()
     asyncio.run(wait_n(n, max_delay))
-    time_end = time.time()
+    end = time.time()
     # calculates total execution time
-    time_total = time_end - time_start
-    return time_total / n
+    total_time = end - start
+    return total_time / n
