@@ -16,11 +16,11 @@ import time asyncio and wait_n
 
 def measure_time(n: int, max_delay: int) -> float:
     """
-    
+
     Args:
         n (int): argument passed to wait_n
         max_delay (int): argument passed to wait_n
-        
+
     Return:
         Float: average time
     """
