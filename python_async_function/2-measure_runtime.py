@@ -1,12 +1,14 @@
 #!/usr/bin/env python3
 
 """
-This module measures the runtime of the wait_n coroutine from the 1-concurrent_coroutines module.
+This module measures the runtime of the wait_n coroutine
+from the 1-concurrent_coroutines module.
 """
 
 import time
 import asyncio
 wait_n = __import__('1-concurrent_coroutines').wait_n
+
 
 def measure_time(n: int, max_delay: int) -> float:
     """
