@@ -17,8 +17,11 @@ non-blocking.
 
 def measure_time(n: int, max_delay: int) -> float:
     """
-
-    Return:
+    Args:
+        n (int): argument passed to wait_n
+        max_delay (int): argument passed to wait_n
+        
+    Returns:
         Float: verage time
     """
     time_start = time.time()
