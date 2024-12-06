@@ -17,7 +17,9 @@ non-blocking.
 
 def measure_time(n: int, max_delay: int) -> float:
     """
-    return a result float
+
+    Return:
+        Float: verage time
     """
     time_start = time.time()
     asyncio.run(wait_n(n, max_delay))
