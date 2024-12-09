@@ -16,8 +16,10 @@ class Server:
     """
     DATA_FILE = "Popular_Baby_Names.csv"
 
+
     def __init__(self):
         self.__dataset = None
+
 
     def dataset(self) -> List[List]:
         """
@@ -30,6 +32,7 @@ class Server:
             self.__dataset = dataset[1:]
 
         return self.__dataset
+
 
     def get_page(self, page: int = 1, page_size: int = 10) -> List[List]:
         assert isinstance(page, int) and page > 0  # if page is (int)
