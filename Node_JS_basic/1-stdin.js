@@ -1,12 +1,16 @@
-process.stdout.write('Welcome to Holberton School, what is your name?\n');
+const readline = require('readline');
 
-// datas by user
-process.stdin.on('data', (data) => {
-  const name = data.toString().trim(); // delete spaces around name
-  console.log(`Your name is: ${name}`); // display name of user
+const rl = readline.createInterface({
+  input: process.stdin,
+  output: process.stdout,
+});
+
+console.log('Welcome to Holberton School, what is your name?');
+
+rl.on('line', (name) => {
+  console.log(`Your name is: ${name}`);
 
   console.log('This important software is now closing');
 
-  // end of the processus
-  process.stdin.end();
+  rl.close();
 });
