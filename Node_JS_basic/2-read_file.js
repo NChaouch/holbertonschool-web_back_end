@@ -9,8 +9,10 @@ function countStudents(path) {
       throw new Error('Cannot load the database');
     }
 
+    // Excration of the header and data of rows
     const header = lines[0].split(',');
     const rows = lines.slice(1);
+    // create map for count students/fields
     const fieldCounts = {};
     let totalStudents = 0;
 
@@ -36,6 +38,7 @@ function countStudents(path) {
       console.log(`Number of students in ${field}: ${students.length}. List: ${students.join(', ')}`);
     }
   } catch (error) {
+    // cannot load the database
     throw new Error('Cannot load the database');
   }
 }
