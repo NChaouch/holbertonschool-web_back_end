@@ -6,5 +6,5 @@ const app = http.createServer((req, res) => {
 });
 // server in 1245
 app.listen(1245);
-// export the server
+// export the serverp
 module.exports = app;
