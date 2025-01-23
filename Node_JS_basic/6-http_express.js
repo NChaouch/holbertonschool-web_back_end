@@ -1,7 +1,7 @@
 const express = require('express');
 // Creation of the application express
 const app = express();
-// endpoint with root
+// endpoint with rootr
 app.get('/', (req, res) => {
   res.send('Hello Holberton School!');
 });
