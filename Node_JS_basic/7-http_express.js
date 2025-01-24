@@ -11,14 +11,17 @@ app.get('/', (req, res) => {
 app.get('/students', async (req, res) => {
   const dbPath = process.argv[2];
   try {
-    res.write('This is the list of our students\n');
-    await countStudents(dbPath);
-    res.end();
+    let responseText = 'This is the list of our students\n';
+    const studentsData = await countStudents(dbPath);
+    responseText += studentsData;
+    res.send(responseText);
   } catch (error) {
-    res.status(500).send(error.message);
+    res.status(500).send(`Cannot load the database: ${error.message}`);
   }
 });
 
-app.listen(port);
+app.listen(port, () => {
+  console.log(`Server running on port ${port}`);
+});
 
 module.exports = app;
